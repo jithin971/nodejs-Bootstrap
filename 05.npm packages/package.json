@@ -1,0 +1,15 @@
+{
+  "name": "demonpmpck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "creatingServer.js",
+  "dependencies": {
+    "upper-case": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
