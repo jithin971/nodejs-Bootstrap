@@ -10,9 +10,9 @@ for(var i=0;i<10;i++){
     console.log( i);
 }
 var a=['jithin','raju'];
-console.log("myname:", name);
-console.log("myname:", phone);
+console.log("myname :", name);
+console.log("myname :", phone);
 
-console.log('myname:', sub);
+console.log('myname :', sub);
 
-console.log('myname: ', a[0]);
+console.log('myname : ', a[0]);
