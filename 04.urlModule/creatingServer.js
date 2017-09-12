@@ -12,4 +12,6 @@ http.createServer(function (req, res) {
     var QData = q.query;
     console.log(QData.month)
     res.end('helloworld');
-}).listen(8081)
+}).listen(8081);
+
+ console.log("end of code")
