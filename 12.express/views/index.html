@@ -1,0 +1,39 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+<body>
+
+<div ng-app="myApp" ng-controller="myctrl">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello view {{name}}</h1>
+  <button ng-click="changepath()">save</button>
+
+<div ng-view></div>
+</div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.controller("myctrl",function($scope,$location){
+console.log($location.absUrl())
+$scope.changepath=function(){
+
+    $location.path("/red")
+}
+
+})
+app.config(function($routeProvider) {
+    $routeProvider
+ .when("/", {
+        templateUrl : "http://:::8081/red.html"
+    })
+    .when("/red", {
+        templateUrl : "http://localhost:8081/views/red.html"
+    })
+    
+});
+</script>
+
+</body>
+
+</html>
