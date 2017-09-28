@@ -5,8 +5,11 @@
 <body>
 
 <div ng-app="myApp" ng-controller="myctrl">
-  <p>Name : <input type="text" ng-model="name"></p>
-  <h1>Hello public{{name}}</h1>
+<ul>
+
+    <li ><a href="blue">home</a></li>
+        <li><a href="red">discuss</a></li>
+</ul>
   <button ng-click="changepath()">save</button>
 
 <div ng-view></div>
@@ -25,13 +28,20 @@ console.log(data);
 }
 
 })
-app.config(function($routeProvider) {
+app.config(function($locationProvider, $routeProvider) {
+    $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});
     $routeProvider
  .when("/", {
       
     })
     .when("/red", {
-        templateUrl : "red.html"
+        templateUrl : "./red.html"
+    })
+     .when("/blue", {
+        template : "blye"
     })
     
 });
